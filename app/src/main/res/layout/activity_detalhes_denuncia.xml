@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_gravity="center_vertical"
+    tools:context="helppet.com.br.helppetmobile.DetalhesDenunciaActivty">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Título de denúncia"
+        android:textSize="25dp"
+        android:gravity="center"
+        android:textColor="#000"
+        android:id="@+id/tituloDenunciaDescricao"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Tipo da denuncia"
+        android:textSize="20dp"
+        android:gravity="right"
+        android:textColor="#000"
+        android:id="@+id/tipoDenunciaDescricao"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Local"
+        android:textSize="20dp"
+        android:gravity="right"
+        android:textColor="#000"
+        android:id="@+id/localDenunciaDescricao"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Local"
+        android:textSize="20dp"
+        android:gravity="right"
+        android:textColor="#000"
+        android:id="@+id/descricaoCompletaDenunciaDescricao"/>
+
+</LinearLayout>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_gravity="center_vertical"
+    tools:context="helppet.com.br.helppetmobile.DetalhesExperienciaActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Título da Experiencia"
+        android:textSize="25dp"
+        android:gravity="center"
+        android:textColor="#000"
+        android:id="@+id/tituloExperienciaDescricao"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Tipo da Experiencia"
+        android:textSize="20dp"
+        android:gravity="left"
+        android:textColor="#000"
+        android:id="@+id/tipoExperienciaDescricao"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Data"
+        android:textSize="20dp"
+        android:gravity="left"
+        android:textColor="#000"
+        android:id="@+id/dataExperienciaDescricao"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Texto da Experiência"
+        android:textSize="20dp"
+        android:gravity="center"
+        android:textColor="#000"
+        android:id="@+id/descricaoCompletaExperienciaDescricao"/>
+
+</LinearLayout>
