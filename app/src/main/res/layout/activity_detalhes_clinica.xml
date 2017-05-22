@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="helppet.com.br.helppetmobile.DetalhesClinicaActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Nome Clinica/Petshop"
+        android:textSize="25dp"
+        android:gravity="center"
+        android:textColor="#000"
+        android:id="@+id/nomeClinicaDescricao"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Email"
+        android:textSize="20dp"
+        android:gravity="left"
+        android:textColor="#000"
+        android:id="@+id/emailClinicaDescricao"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Endereco"
+        android:textSize="20dp"
+        android:gravity="left"
+        android:textColor="#000"
+        android:id="@+id/localClinicaDescricao"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Telefone"
+        android:textSize="20dp"
+        android:gravity="left"
+        android:textColor="#000"
+        android:id="@+id/telefoneClinicaDescricao"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Site"
+        android:textSize="20dp"
+        android:gravity="left"
+        android:textColor="#000"
+        android:id="@+id/siteClinicaDescricao"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Funcionamento"
+        android:textSize="20dp"
+        android:gravity="left"
+        android:textColor="#000"
+        android:id="@+id/funcionamentoClinicaDescricao"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Descrição"
+        android:textSize="20dp"
+        android:gravity="left"
+        android:textColor="#000"
+        android:id="@+id/descricaoClinicaDescricao"/>
+
+</LinearLayout>

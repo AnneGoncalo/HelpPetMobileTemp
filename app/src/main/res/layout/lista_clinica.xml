@@ -9,12 +9,12 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
-        android:text="Denuncias"
+        android:text="Clínicas/Petshops"
         android:textColor="#000"
         android:textSize="25dp" />
 
     <ListView
-        android:id="@+id/listaDenuncia"
+        android:id="@+id/listaClinica"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
 

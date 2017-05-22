@@ -14,13 +14,15 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Ongs" />
+            android:text="Ongs"
+            android:id="@+id/botaoOng"/>
 
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Clinicas/Petshops" />
+            android:text="Clinicas/Petshops"
+            android:id="@+id/botaoClinica"/>
     </LinearLayout>
 
     <LinearLayout

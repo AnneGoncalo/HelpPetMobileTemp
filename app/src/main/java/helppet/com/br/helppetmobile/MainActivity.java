@@ -57,6 +57,27 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(i);
             }
         });
+
+        Button botaoOng = (Button) findViewById(R.id.botaoOng);
+        context = this;
+        botaoOng.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(context,OngsActivity.class);
+                startActivity(i);
+            }
+        });
+
+        Button botaoClinica = (Button) findViewById(R.id.botaoClinica);
+        context = this;
+        botaoClinica.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(context,ClinicaActivity.class);
+                startActivity(i);
+            }
+        });
+
     }
 
     private Context context;

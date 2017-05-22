@@ -2,8 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="helppet.com.br.helppetmobile">
 
-    <uses-permission android:name="android.permission.INTERNET"/>
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
     <application
         android:allowBackup="true"
@@ -19,14 +19,18 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".DenunciasActivity"/>
-        <activity android:name=".DetalhesDenunciaActivty"/>
-        <activity android:name=".EventosActivity"/>
-        <activity android:name=".DetalhesEventoActivity"/>
+        <activity android:name=".DenunciasActivity" />
+        <activity android:name=".DetalhesDenunciaActivty" />
+        <activity android:name=".EventosActivity" />
+        <activity android:name=".DetalhesEventoActivity" />
         <activity android:name=".ExperienciaActivity" />
         <activity android:name=".DetalhesExperienciaActivity" />
         <activity android:name=".AnunciosActivity" />
-        <activity android:name=".DetalhesAnuncioActivity"/>
+        <activity android:name=".DetalhesAnuncioActivity" />
+        <activity android:name=".OngsActivity" />
+        <activity android:name=".DetalhesOngActivity" />
+        <activity android:name=".ClinicaActivity" />
+        <activity android:name=".DetalhesClinicaActivity"></activity>
     </application>
 
 </manifest>

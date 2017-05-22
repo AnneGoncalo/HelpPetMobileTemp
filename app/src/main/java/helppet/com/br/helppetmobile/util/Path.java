@@ -5,13 +5,13 @@ package helppet.com.br.helppetmobile.util;
  */
 
 public  class  Path {
-    //private static String api = "http://10.24.12.128:8080/HelpPet/rest/";
-    private static String api = "http://10.0.0.107:8080/HelpPet/rest/";
+    private static String api = "http://10.24.16.84:8080/HelpPet/rest/";
+    //private static String api = "http://10.0.0.107:8080/HelpPet/rest/";
     private static String denunciaPath = api + "denuncia";
     private static String eventoPath = api + "evento";
     private static String anuncioPath = api + "anuncio";
-    private static String ongPath = api + "ong";
-    private static String clinicaPath = api + "clinica";
+    private static String ongPath = api + "ongs";
+    private static String clinicaPath = api + "clinicas";
     private static String experienciaPath = api + "experiencia";
 
     public static String getDenunciaPath() {

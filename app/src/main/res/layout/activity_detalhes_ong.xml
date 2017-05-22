@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_gravity="center_vertical"
+    tools:context="helppet.com.br.helppetmobile.DetalhesOngActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Nome ONG"
+        android:textSize="25dp"
+        android:gravity="center"
+        android:textColor="#000"
+        android:id="@+id/nomeOngDescricao"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Email"
+        android:textSize="20dp"
+        android:gravity="left"
+        android:textColor="#000"
+        android:id="@+id/emailOngDescricao"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Telefone"
+        android:textSize="20dp"
+        android:gravity="left"
+        android:textColor="#000"
+        android:id="@+id/telefoneOngDescricao"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Endereco"
+        android:textSize="20dp"
+        android:gravity="left"
+        android:textColor="#000"
+        android:id="@+id/localOngDescricao"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Funcionamento"
+        android:textSize="20dp"
+        android:gravity="left"
+        android:textColor="#000"
+        android:id="@+id/funcionamentoOngDescricao"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Site"
+        android:textSize="20dp"
+        android:gravity="left"
+        android:textColor="#000"
+        android:id="@+id/siteOngDescricao"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Site"
+        android:textSize="20dp"
+        android:gravity="left"
+        android:textColor="#000"
+        android:id="@+id/descricaoOngDescricao"/>
+
+</LinearLayout>

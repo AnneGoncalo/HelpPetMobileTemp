@@ -3,19 +3,26 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_gravity="center_vertical"
     android:orientation="vertical">
 
     <TextView
+        android:id="@+id/nomeClinica"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
-        android:text="Denuncias"
+        android:text="Nome da Clínica/Petshop"
         android:textColor="#000"
         android:textSize="25dp" />
 
-    <ListView
-        android:id="@+id/listaDenuncia"
+    <TextView
+        android:id="@+id/localClinica"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Local"
+        android:textColor="#000"
+        android:textSize="25dp" />
 
 </LinearLayout>
+
