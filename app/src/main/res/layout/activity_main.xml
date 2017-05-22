@@ -1,9 +1,19 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:padding="20dp"
+    android:background="@color/branco"
     tools:context="helppet.com.br.helppetmobile.MainActivity">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        app:srcCompat="@drawable/helppet" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -11,17 +21,23 @@
         android:orientation="horizontal">
 
         <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
             android:layout_weight="1"
+            android:layout_margin="10dp"
+            android:background="@color/corOng"
             android:text="Ongs"
+            android:textColor="@color/branco"
             android:id="@+id/botaoOng"/>
 
         <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
             android:layout_weight="1"
+            android:layout_margin="10dp"
+            android:background="@color/corClinica"
             android:text="Clinicas/Petshops"
+            android:textColor="@color/branco"
             android:id="@+id/botaoClinica"/>
     </LinearLayout>
 
@@ -31,18 +47,25 @@
         android:orientation="horizontal">
 
         <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
             android:layout_weight="1"
+            android:layout_margin="10dp"
+            android:background="@color/corEvento"
             android:text="Eventos"
+            android:textColor="@color/branco"
             android:id="@+id/botaoEvento"/>
 
         <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
             android:layout_weight="1"
-            android:text="Denuncias"
-            android:id="@+id/botaoDenuncia"/>
+            android:layout_margin="10dp"
+            android:background="@color/corExperiencia"
+            android:text="Espaço helper"
+            android:textColor="@color/branco"
+            android:id="@+id/botaoExperiencia"/>
+
     </LinearLayout>
 
     <LinearLayout
@@ -51,17 +74,23 @@
         android:orientation="horizontal">
 
         <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
             android:layout_weight="1"
-            android:text="Espaço helper"
-            android:id="@+id/botaoExperiencia"/>
+            android:layout_margin="10dp"
+            android:background="@color/corDenuncia"
+            android:text="Denuncias"
+            android:textColor="@color/branco"
+            android:id="@+id/botaoDenuncia"/>
 
         <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
             android:layout_weight="1"
+            android:layout_margin="10dp"
+            android:background="@color/corAnuncio"
             android:text="Anuncios"
+            android:textColor="@color/branco"
             android:id="@+id/botaoAnuncios"/>
     </LinearLayout>
 

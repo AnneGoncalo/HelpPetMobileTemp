@@ -3,4 +3,15 @@
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
+    <color name="branco">#FFF</color>
+
+    <color name="corOng">#1E90FF</color>
+    <color name="corClinica">#1E90FF</color>
+
+    <color name="corEvento">#FF8C00</color>
+    <color name="corAnuncio">#9400D3</color>
+
+    <color name="corDenuncia">#9400D3</color>
+    <color name="corExperiencia">#FF8C00</color>
+
 </resources>
