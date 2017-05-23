@@ -1,19 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:layout_gravity="center_vertical"
+    android:padding="15dp"
     tools:context="helppet.com.br.helppetmobile.DetalhesDenunciaActivty">
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Título de denúncia"
+        android:layout_margin="10dp"
+        android:text="Título da denúncia"
         android:textSize="25dp"
+        android:textStyle="bold"
         android:gravity="center"
-        android:textColor="#000"
+        android:textColor="@color/corDenuncia"
         android:id="@+id/tituloDenunciaDescricao"/>
 
     <TextView
@@ -22,7 +26,7 @@
         android:text="Tipo da denuncia"
         android:textSize="20dp"
         android:gravity="right"
-        android:textColor="#000"
+        android:textColor="@color/corDenuncia"
         android:id="@+id/tipoDenunciaDescricao"/>
 
     <TextView
@@ -31,15 +35,16 @@
         android:text="Local"
         android:textSize="20dp"
         android:gravity="right"
-        android:textColor="#000"
+        android:textColor="@color/corDenuncia"
         android:id="@+id/localDenunciaDescricao"/>
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Local"
+        android:layout_margin="10dp"
+        android:text="Texto completo da denúncia"
         android:textSize="20dp"
-        android:gravity="right"
+        android:gravity="left"
         android:textColor="#000"
         android:id="@+id/descricaoCompletaDenunciaDescricao"/>
 

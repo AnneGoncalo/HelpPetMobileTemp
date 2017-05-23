@@ -4,33 +4,35 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_gravity="center_vertical"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:padding="15dp">
 
     <TextView
         android:id="@+id/tituloExperiencia"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
-        android:text="Titulo Experiencia"
+        android:text="Titulo Experiência"
         android:textColor="#000"
-        android:textSize="25dp" />
+        android:textStyle="bold"
+        android:textSize="20dp" />
 
     <TextView
         android:id="@+id/tipoExperiencia"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="right"
-        android:text="Tipo Experiencia"
-        android:textColor="#000"
-        android:textSize="25dp"/>
+        android:text="Tipo Experiência"
+        android:textColor="@color/corExperiencia"
+        android:textSize="20dp"/>
 
     <TextView
         android:id="@+id/textoExperiencia"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
-        android:text="Texto da Experiencia"
+        android:text="Texto reduzido da Experiência..."
         android:textColor="#000"
-        android:textSize="25dp" />
+        android:textSize="20dp" />
 
 </LinearLayout>

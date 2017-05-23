@@ -4,7 +4,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_gravity="center_vertical"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:padding="15dp">
 
     <TextView
         android:id="@+id/nomeOng"
@@ -12,8 +13,9 @@
         android:layout_height="wrap_content"
         android:gravity="center"
         android:text="Nome da ONG"
+        android:textStyle="bold"
         android:textColor="#000"
-        android:textSize="25dp" />
+        android:textSize="20dp" />
 
     <TextView
         android:id="@+id/localOng"
@@ -22,7 +24,7 @@
         android:gravity="center"
         android:text="Local"
         android:textColor="#000"
-        android:textSize="25dp" />
+        android:textSize="20dp" />
 
 </LinearLayout>
 

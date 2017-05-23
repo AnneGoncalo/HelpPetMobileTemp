@@ -5,32 +5,36 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:layout_gravity="center_vertical"
+    android:padding="15dp"
     tools:context="helppet.com.br.helppetmobile.DetalhesAnuncioActivity">
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:gravity="center"
         android:text="Título do Anúncio"
         android:textSize="25dp"
-        android:gravity="center"
-        android:textColor="#000"
+        android:textColor="@color/corAnuncio"
+        android:textStyle="bold"
         android:id="@+id/tituloAnuncioDescricao"/>
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:gravity="right"
         android:text="Tipo do Anuncio"
         android:textSize="20dp"
-        android:gravity="right"
-        android:textColor="#000"
+        android:textColor="@color/corAnuncio"
         android:id="@+id/tipoAnuncioDescricao"/>
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:gravity="left"
         android:text="Descrição do Anuncio"
         android:textSize="20dp"
-        android:gravity="right"
         android:textColor="#000"
         android:id="@+id/descricaoCompletaAnuncioDescricao"/>
 

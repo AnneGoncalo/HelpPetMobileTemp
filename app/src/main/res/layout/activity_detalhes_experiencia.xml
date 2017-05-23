@@ -5,41 +5,45 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:layout_gravity="center_vertical"
+    android:padding="15dp"
     tools:context="helppet.com.br.helppetmobile.DetalhesExperienciaActivity">
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Título da Experiencia"
-        android:textSize="25dp"
+        android:layout_marginBottom="10dp"
         android:gravity="center"
-        android:textColor="#000"
+        android:text="Título da Experiencia"
+        android:textColor="@color/corExperiencia"
+        android:textSize="25dp"
+        android:textStyle="bold"
         android:id="@+id/tituloExperienciaDescricao"/>
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Tipo da Experiencia"
-        android:textSize="20dp"
         android:gravity="left"
-        android:textColor="#000"
+        android:text="Tipo da Experiencia"
+        android:textColor="@color/corExperiencia"
+        android:textSize="20dp"
         android:id="@+id/tipoExperienciaDescricao"/>
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Data"
-        android:textSize="20dp"
         android:gravity="left"
-        android:textColor="#000"
+        android:text="00/00/0000"
+        android:textColor="@color/corExperiencia"
+        android:textSize="20dp"
         android:id="@+id/dataExperienciaDescricao"/>
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
         android:text="Texto da Experiência"
         android:textSize="20dp"
-        android:gravity="center"
+        android:gravity="left"
         android:textColor="#000"
         android:id="@+id/descricaoCompletaExperienciaDescricao"/>
 

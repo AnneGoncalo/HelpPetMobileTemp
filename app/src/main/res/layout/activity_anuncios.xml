@@ -4,24 +4,26 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_gravity="center_vertical"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:padding="15dp">
 
     <TextView
         android:id="@+id/tituloAnuncio"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
-        android:text="Título do anuncio"
+        android:text="Título do Anúncio"
         android:textColor="#000"
-        android:textSize="25dp" />
+        android:textStyle="bold"
+        android:textSize="20dp" />
 
     <TextView
         android:id="@+id/tipoAnuncio"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="right"
-        android:text="Tipo do anuncio"
+        android:text="Tipo do Anúncio"
         android:textColor="#000"
-        android:textSize="25dp" />
+        android:textSize="20dp" />
 
 </LinearLayout>

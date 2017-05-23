@@ -5,50 +5,62 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:layout_gravity="center_vertical"
+    android:padding="15dp"
     tools:context="helppet.com.br.helppetmobile.DetalhesEventoActivity">
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:gravity="center"
         android:text="Nome Evento"
         android:textSize="25dp"
-        android:gravity="center"
-        android:textColor="#000"
+        android:textColor="@color/corEvento"
+        android:textStyle="bold"
         android:id="@+id/nomeEventoDescricao"/>
 
-    <TextView
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Data evento"
-        android:textSize="20dp"
-        android:gravity="right"
-        android:textColor="#000"
-        android:id="@+id/dataEventoDescricao"/>
+        android:orientation="horizontal">
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Horario Evento"
-        android:textSize="20dp"
-        android:gravity="right"
-        android:textColor="#000"
-        android:id="@+id/horarioEventoDescricao"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="left"
+            android:text="Data evento"
+            android:textSize="20dp"
+            android:textColor="@color/corEvento"
+            android:id="@+id/dataEventoDescricao"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="right"
+            android:text="Horario Evento"
+            android:textSize="20dp"
+            android:textColor="@color/corEvento"
+            android:id="@+id/horarioEventoDescricao"/>
+    </LinearLayout>
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Local Evento"
         android:textSize="20dp"
-        android:gravity="right"
-        android:textColor="#000"
+        android:gravity="left"
+        android:textColor="@color/corEvento"
         android:id="@+id/localEventoDescricao"/>
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
         android:text="Descricao Evento"
         android:textSize="20dp"
-        android:gravity="center"
+        android:gravity="left"
         android:textColor="#000"
         android:id="@+id/descricaoEventoDescricao"/>
 
