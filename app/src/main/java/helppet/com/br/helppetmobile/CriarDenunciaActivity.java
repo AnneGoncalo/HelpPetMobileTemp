@@ -75,8 +75,9 @@ public class CriarDenunciaActivity extends AppCompatActivity {
                 } else {
                     Toast.makeText(context, " Você está sem internet, sua denuncia será persistida mais tarde ... ", Toast.LENGTH_LONG).show();
 
-                    
+
                     denunciaDAO.inserir(denuncia);
+                    finish();
 
                 }
 

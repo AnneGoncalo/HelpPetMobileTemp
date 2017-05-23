@@ -2,6 +2,8 @@ package helppet.com.br.helppetmobile;
 
 import android.content.Context;
 import android.content.Intent;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.os.AsyncTask;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -35,7 +37,19 @@ public class ExperienciaActivity extends AppCompatActivity {
         setContentView(R.layout.lista_experiencia);
         context = this;
         listViewExperiencia = (ListView) findViewById(R.id.listaExperiencias);
-        new ConsultaExperiencias().execute(Path.getExperienciaPath());
+        if(isNetworkAvailable()){
+            new ConsultaExperiencias().execute(Path.getExperienciaPath());
+        }else {
+            Toast.makeText(context,"Sem conexão com a interntet",Toast.LENGTH_SHORT).show();
+        }
+
+    }
+
+    private boolean isNetworkAvailable() {
+        ConnectivityManager connectivityManager
+                = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
+        NetworkInfo activeNetworkInfo = connectivityManager.getActiveNetworkInfo();
+        return activeNetworkInfo != null && activeNetworkInfo.isConnected();
     }
 
     private Context context;

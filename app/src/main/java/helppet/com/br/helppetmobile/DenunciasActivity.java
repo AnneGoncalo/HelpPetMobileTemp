@@ -27,6 +27,7 @@ import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
 
+import helppet.com.br.helppetmobile.DAO.DenunciaDAO;
 import helppet.com.br.helppetmobile.R;
 import helppet.com.br.helppetmobile.adapter.DenunciaAdapter;
 import helppet.com.br.helppetmobile.modelo.Denuncia;
@@ -40,8 +41,10 @@ public class DenunciasActivity extends AppCompatActivity {
         setContentView(R.layout.lista_denuncia);
         context = this;
         listViewDeuncias = (ListView) findViewById(R.id.listaDenuncia);
-
+        denunciaDAO = new DenunciaDAO(this);
     }
+
+    private DenunciaDAO denunciaDAO ;
 
     @Override
     public void onStart() {
@@ -49,7 +52,30 @@ public class DenunciasActivity extends AppCompatActivity {
         if (isNetworkAvailable()) {
             new ConsultaDenuncias().execute(Path.getDenunciaPath());
         } else {
-            Toast.makeText(this, " Não tem internet ", Toast.LENGTH_LONG).show();
+            Toast.makeText(this, " Sem conexão com a internet ", Toast.LENGTH_LONG).show();
+             final ArrayList<Denuncia> listaDenuncias = denunciaDAO.buscarDenuncia();
+            if (listaDenuncias.size() > 0) {
+                denunciaAdapter = new DenunciaAdapter(context, listaDenuncias);
+                listViewDeuncias.setAdapter(denunciaAdapter);
+                listViewDeuncias.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+                    @Override
+                    public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+
+                        Intent i = new Intent(context, DetalhesDenunciaActivty.class);
+                        Denuncia denunciaSelecionada = listaDenuncias.get(position);
+
+                        i.putExtra("titulo", denunciaSelecionada.getTituloDenuncia());
+                        i.putExtra("tipo", denunciaSelecionada.getTipoDenuncia());
+                        i.putExtra("local", denunciaSelecionada.getLocalizacao());
+                        i.putExtra("descricao", denunciaSelecionada.getDescricaoDenuncia());
+
+                        startActivity(i);
+                    }
+                });
+            }
+
+
+
         }
 
 
@@ -84,6 +110,8 @@ public class DenunciasActivity extends AppCompatActivity {
         }
         return true;
     }
+
+
 
 
     public class ConsultaDenuncias extends AsyncTask<String, String, String> {

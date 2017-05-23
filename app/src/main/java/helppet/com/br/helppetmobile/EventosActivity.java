@@ -2,12 +2,15 @@ package helppet.com.br.helppetmobile;
 
 import android.content.Context;
 import android.content.Intent;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.os.AsyncTask;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
@@ -35,7 +38,12 @@ public class EventosActivity extends AppCompatActivity {
         setContentView(R.layout.lista_evento);
         context = this;
         listViewEventos = (ListView) findViewById(R.id.listaEventos);
-        new ConsultaEventos().execute(Path.getEventoPath());
+        if(isNetworkAvailable()){
+            new ConsultaEventos().execute(Path.getEventoPath());
+        }else {
+            Toast.makeText(context,"Sem conexão com a interntet",Toast.LENGTH_SHORT).show();
+        }
+
 
     }
 
@@ -43,7 +51,12 @@ public class EventosActivity extends AppCompatActivity {
     private ListView listViewEventos;
     private EventoAdapter eventoAdapter;
 
-
+    private boolean isNetworkAvailable() {
+        ConnectivityManager connectivityManager
+                = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
+        NetworkInfo activeNetworkInfo = connectivityManager.getActiveNetworkInfo();
+        return activeNetworkInfo != null && activeNetworkInfo.isConnected();
+    }
     public class ConsultaEventos extends AsyncTask<String, String, String> {
 
         @Override
