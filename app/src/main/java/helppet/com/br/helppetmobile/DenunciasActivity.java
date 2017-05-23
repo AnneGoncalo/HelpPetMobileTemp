@@ -2,6 +2,8 @@ package helppet.com.br.helppetmobile;
 
 import android.content.Context;
 import android.content.Intent;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.os.AsyncTask;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -10,6 +12,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
@@ -41,16 +44,25 @@ public class DenunciasActivity extends AppCompatActivity {
     }
 
     @Override
-    public void onStart(){
+    public void onStart() {
         super.onStart();
-        new ConsultaDenuncias().execute(Path.getDenunciaPath());
+        if (isNetworkAvailable()) {
+            new ConsultaDenuncias().execute(Path.getDenunciaPath());
+        } else {
+            Toast.makeText(this, " Não tem internet ", Toast.LENGTH_LONG).show();
+        }
+
 
     }
 
-   /* @Override
-    protected void onRestart() {
-        super.onRestart();
-    }*/
+
+    private boolean isNetworkAvailable() {
+        ConnectivityManager connectivityManager
+                = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
+        NetworkInfo activeNetworkInfo = connectivityManager.getActiveNetworkInfo();
+        return activeNetworkInfo != null && activeNetworkInfo.isConnected();
+    }
+
 
     private Context context;
     private ListView listViewDeuncias;
@@ -128,20 +140,20 @@ public class DenunciasActivity extends AppCompatActivity {
 
             final ArrayList<Denuncia> denuncias = gson.fromJson(resposta, tipoDado.getType());
 
-            if(denuncias.size() > 0 ){
-                denunciaAdapter = new DenunciaAdapter(context,denuncias);
+            if (denuncias.size() > 0) {
+                denunciaAdapter = new DenunciaAdapter(context, denuncias);
                 listViewDeuncias.setAdapter(denunciaAdapter);
                 listViewDeuncias.setOnItemClickListener(new AdapterView.OnItemClickListener() {
                     @Override
                     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 
-                        Intent i  = new Intent(context, DetalhesDenunciaActivty.class);
+                        Intent i = new Intent(context, DetalhesDenunciaActivty.class);
                         Denuncia denunciaSelecionada = denuncias.get(position);
 
-                        i.putExtra("titulo",denunciaSelecionada.getTituloDenuncia());
-                        i.putExtra("tipo",denunciaSelecionada.getTipoDenuncia());
-                        i.putExtra("local",denunciaSelecionada.getLocalizacao());
-                        i.putExtra("descricao",denunciaSelecionada.getDescricaoDenuncia());
+                        i.putExtra("titulo", denunciaSelecionada.getTituloDenuncia());
+                        i.putExtra("tipo", denunciaSelecionada.getTipoDenuncia());
+                        i.putExtra("local", denunciaSelecionada.getLocalizacao());
+                        i.putExtra("descricao", denunciaSelecionada.getDescricaoDenuncia());
 
                         startActivity(i);
                     }

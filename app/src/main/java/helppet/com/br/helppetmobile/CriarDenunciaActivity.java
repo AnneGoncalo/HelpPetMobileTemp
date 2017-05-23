@@ -1,12 +1,16 @@
 package helppet.com.br.helppetmobile;
 
+import android.content.Context;
 import android.content.DialogInterface;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.os.AsyncTask;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import com.google.gson.Gson;
 
@@ -15,10 +19,11 @@ import java.io.IOException;
 import java.io.PrintStream;
 import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
-import java.net.ProtocolException;
 import java.net.URL;
+import java.util.List;
 import java.util.Scanner;
 
+import helppet.com.br.helppetmobile.DAO.DenunciaDAO;
 import helppet.com.br.helppetmobile.modelo.Denuncia;
 import helppet.com.br.helppetmobile.util.Path;
 
@@ -32,6 +37,9 @@ public class CriarDenunciaActivity extends AppCompatActivity {
         entradaTipo = (EditText) findViewById(R.id.entradaTipoDenuncia);
         entradaLocal = (EditText) findViewById(R.id.entradaLocalDenuncia);
         entradaDescricao = (EditText) findViewById(R.id.entradaDescricaoDenuncia);
+        context = this;
+        denunciaDAO = new DenunciaDAO(context);
+
     }
 
     private Denuncia denuncia;
@@ -39,9 +47,13 @@ public class CriarDenunciaActivity extends AppCompatActivity {
     private EditText entradaTipo;
     private EditText entradaLocal;
     private EditText entradaDescricao;
+    private Context context;
+    private DenunciaDAO denunciaDAO;
 
 
     public void cadastrarDenuncia(View view) {
+
+
         String tipo = entradaTipo.getText().toString();
         String titulo = entradaTitulo.getText().toString();
         String descricao = entradaDescricao.getText().toString();
@@ -49,25 +61,38 @@ public class CriarDenunciaActivity extends AppCompatActivity {
 
 
         denuncia = new Denuncia(titulo, descricao, tipo, local);
-        Gson gson = new Gson();
 
         AlertDialog.Builder dialog = new AlertDialog.Builder(this);
         dialog.setMessage(" Deseja enviar esta denúncia ? ");
         dialog.setPositiveButton("Sim", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
-                Gson gson = new Gson();
-                String jsonDenuncia = gson.toJson(denuncia);
-                new CriarDenuncia().execute(Path.getDenunciaPath(), jsonDenuncia);
-                finish();
+                if (isNetworkAvailable()) {
+                    Gson gson = new Gson();
+                    String jsonDenuncia = gson.toJson(denuncia);
+                    new CriarDenuncia().execute(Path.getDenunciaPath(), jsonDenuncia);
+                    finish();
+                } else {
+                    Toast.makeText(context, " Você está sem internet, sua denuncia será persistida mais tarde ... ", Toast.LENGTH_LONG).show();
+
+                    
+                    denunciaDAO.inserir(denuncia);
+
+                }
+
             }
         });
-        dialog.setNeutralButton("Não",null);
+        dialog.setNeutralButton("Não", null);
         dialog.show();
 
 
+    }
 
-
+    private boolean isNetworkAvailable() {
+        ConnectivityManager connectivityManager
+                = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
+        NetworkInfo activeNetworkInfo = connectivityManager.getActiveNetworkInfo();
+        return activeNetworkInfo != null && activeNetworkInfo.isConnected();
     }
 
     public class CriarDenuncia extends AsyncTask<String, String, String> {
@@ -123,6 +148,26 @@ public class CriarDenunciaActivity extends AppCompatActivity {
         }
 
 
+    }
+
+    public void persistirDenunciasLocias(Context context) {
+        List<Denuncia> listaDenuncias = denunciaDAO.buscarDenuncia();
+        denunciaDAO = new DenunciaDAO(context);
+
+        Gson gson = new Gson();
+        for (Denuncia denuncia : listaDenuncias) {
+            String denunciaJson = gson.toJson(denuncia);
+            new CriarDenuncia().execute(Path.getDenunciaPath(), denunciaJson);
+            denunciaDAO.excluir(denuncia);
+
+        }
+
+
+    }
+
+    public boolean temDenuncia(Context context){
+        denunciaDAO = new DenunciaDAO(context);
+        return denunciaDAO.buscarDenuncia().size() > 0;
     }
 
 }
