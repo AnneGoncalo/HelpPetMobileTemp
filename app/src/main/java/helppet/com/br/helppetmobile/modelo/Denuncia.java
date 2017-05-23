@@ -3,6 +3,7 @@ package helppet.com.br.helppetmobile.modelo;
  *
  * @author Ana Gonçalo
  */
+
 public class Denuncia {
     private int idDenuncia;
     private String tituloDenuncia;
