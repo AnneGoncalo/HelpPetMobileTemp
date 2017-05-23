@@ -5,6 +5,8 @@ import android.content.Intent;
 import android.os.AsyncTask;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
@@ -35,12 +37,42 @@ public class DenunciasActivity extends AppCompatActivity {
         setContentView(R.layout.lista_denuncia);
         context = this;
         listViewDeuncias = (ListView) findViewById(R.id.listaDenuncia);
-        new ConsultaDenuncias().execute(Path.getDenunciaPath());
+
     }
+
+    @Override
+    public void onStart(){
+        super.onStart();
+        new ConsultaDenuncias().execute(Path.getDenunciaPath());
+
+    }
+
+   /* @Override
+    protected void onRestart() {
+        super.onRestart();
+    }*/
 
     private Context context;
     private ListView listViewDeuncias;
     private DenunciaAdapter denunciaAdapter;
+
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.denuncia, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        int menu_selecionado = item.getItemId();
+        if (menu_selecionado == R.id.menuDenuncia) {
+            Intent i = new Intent(this, CriarDenunciaActivity.class);
+            startActivity(i);
+        }
+        return true;
+    }
+
 
     public class ConsultaDenuncias extends AsyncTask<String, String, String> {
 

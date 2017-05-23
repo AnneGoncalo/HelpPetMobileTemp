@@ -26,6 +26,13 @@ public class Denuncia {
         this.localizacao = localizacao;
     }
 
+    public Denuncia(String tituloDenuncia, String descricaoDenuncia, String tipoDenuncia, String localizacao) {
+        this.tituloDenuncia = tituloDenuncia;
+        this.descricaoDenuncia = descricaoDenuncia;
+        this.tipoDenuncia = tipoDenuncia;
+        this.localizacao = localizacao;
+    }
+
     public int getIdDenuncia() {
         return idDenuncia;
     }

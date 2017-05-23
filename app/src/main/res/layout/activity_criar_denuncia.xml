@@ -1,0 +1,52 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="helppet.com.br.helppetmobile.CriarDenunciaActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Denúncia"
+        android:textColor="@color/corDenuncia"
+        android:textSize="25dp" />
+
+
+    <EditText
+        android:id="@+id/entradaTituloDenuncia"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Título" />
+
+    <EditText
+        android:id="@+id/entradaTipoDenuncia"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Típo" />
+
+    <EditText
+        android:id="@+id/entradaLocalDenuncia"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Local" />
+
+    <EditText
+        android:id="@+id/entradaDescricaoDenuncia"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="top|left"
+        android:hint="Escreva sua denúncia aqui "
+        android:lines="10" />
+
+    <Button
+        android:id="@+id/cadastrarDenuncia"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:onClick="cadastrarDenuncia"
+        android:text="Denunciar" />
+
+
+</LinearLayout>

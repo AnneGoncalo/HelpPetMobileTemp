@@ -30,7 +30,8 @@
         <activity android:name=".OngsActivity" />
         <activity android:name=".DetalhesOngActivity" />
         <activity android:name=".ClinicaActivity" />
-        <activity android:name=".DetalhesClinicaActivity"></activity>
+        <activity android:name=".DetalhesClinicaActivity" />
+        <activity android:name=".CriarDenunciaActivity"></activity>
     </application>
 
 </manifest>
