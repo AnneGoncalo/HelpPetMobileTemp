@@ -6,68 +6,117 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:padding="20dp"
     tools:context="helppet.com.br.helppetmobile.DetalhesClinicaActivity">
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Nome Clinica/Petshop"
-        android:textSize="25dp"
+        android:layout_marginBottom="15dp"
         android:gravity="center"
-        android:textColor="#000"
+        android:text="Nome Clínica/Petshop"
+        android:textSize="25dp"
+        android:textStyle="bold"
+        android:textColor="@color/corOng"
         android:id="@+id/nomeClinicaDescricao"/>
 
     <TextView
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Email"
+        android:layout_marginTop="5dp"
+        android:text="Sobre: "
         android:textSize="20dp"
+        android:textStyle="bold"
         android:gravity="left"
-        android:textColor="#000"
-        android:id="@+id/emailClinicaDescricao"/>
+        android:textColor="@color/corClinica" />
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Endereco"
-        android:textSize="20dp"
+        android:layout_marginLeft="25dp"
         android:gravity="left"
+        android:text="Cidade/UF"
+        android:textSize="20dp"
         android:textColor="#000"
         android:id="@+id/localClinicaDescricao"/>
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Telefone"
-        android:textSize="20dp"
+        android:layout_marginLeft="25dp"
         android:gravity="left"
+        android:text="clinicateste@email.com"
+        android:textSize="20dp"
+        android:textColor="#000"
+        android:id="@+id/emailClinicaDescricao"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="25dp"
+        android:gravity="left"
+        android:text="(00)00000-0000"
+        android:textSize="20dp"
         android:textColor="#000"
         android:id="@+id/telefoneClinicaDescricao"/>
 
     <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="Site: "
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:gravity="left"
+        android:textColor="@color/corClinica" />
+
+    <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Site"
-        android:textSize="20dp"
+        android:layout_marginLeft="25dp"
         android:gravity="left"
+        android:text="clinica.com.br"
+        android:textSize="20dp"
         android:textColor="#000"
         android:id="@+id/siteClinicaDescricao"/>
 
     <TextView
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Funcionamento"
+        android:layout_marginTop="5dp"
+        android:text="Funcionamento: "
         android:textSize="20dp"
+        android:textStyle="bold"
         android:gravity="left"
-        android:textColor="#000"
-        android:id="@+id/funcionamentoClinicaDescricao"/>
+        android:textColor="@color/corClinica" />
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Descrição"
-        android:textSize="20dp"
+        android:layout_marginLeft="25dp"
         android:gravity="left"
+        android:text="Seg-Sab"
+        android:textSize="20dp"
+        android:textColor="#000"
+        android:id="@+id/funcionamentoClinicaDescricao"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="Descrição: "
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:gravity="left"
+        android:textColor="@color/corClinica" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="25dp"
+        android:gravity="left"
+        android:text="Atendemos todos os pets"
+        android:textSize="20dp"
         android:textColor="#000"
         android:id="@+id/descricaoClinicaDescricao"/>
 
