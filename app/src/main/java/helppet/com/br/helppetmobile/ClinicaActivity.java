@@ -2,12 +2,15 @@ package helppet.com.br.helppetmobile;
 
 import android.content.Context;
 import android.content.Intent;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.os.AsyncTask;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
@@ -36,12 +39,24 @@ public class ClinicaActivity extends AppCompatActivity {
         setContentView(R.layout.lista_clinica);
         context = this;
         listViewClinicas = (ListView) findViewById(R.id.listaClinica);
-        new ConsultaClinicas().execute(Path.getClinicaPath());
+        if(isNetworkAvailable()){
+            new ConsultaClinicas().execute(Path.getClinicaPath());
+        }else{
+            Toast.makeText(context,"Sem conexão com a interntet",Toast.LENGTH_SHORT).show();
+        }
+
     }
 
     private Context context;
     private ListView listViewClinicas;
     private ClinicaAdapter clinicaAdapter;
+
+    private boolean isNetworkAvailable() {
+        ConnectivityManager connectivityManager
+                = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
+        NetworkInfo activeNetworkInfo = connectivityManager.getActiveNetworkInfo();
+        return activeNetworkInfo != null && activeNetworkInfo.isConnected();
+    }
 
     public class ConsultaClinicas extends AsyncTask<String, String, String> {
 

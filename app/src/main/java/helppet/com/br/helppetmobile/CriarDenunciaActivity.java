@@ -103,8 +103,17 @@ public class CriarDenunciaActivity extends AppCompatActivity {
                     new CriarDenuncia().execute(Path.getDenunciaPath(), jsonDenuncia);
                     finish();
                 } else {
+<<<<<<< HEAD
                     Toast.makeText(context, " Sem conexão com a internet, sua denuncia será persistida mais tarde ... ", Toast.LENGTH_LONG).show();
                     denunciaDAO.inserir(denuncia);
+=======
+                    Toast.makeText(context, " Você está sem internet, sua denuncia será persistida mais tarde ... ", Toast.LENGTH_LONG).show();
+
+
+                    denunciaDAO.inserir(denuncia);
+                    finish();
+
+>>>>>>> b373dcd401e35bca0295766e80712c7f1c9bac61
                 }
             }
         });

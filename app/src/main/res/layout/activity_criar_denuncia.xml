@@ -46,6 +46,7 @@
     <Spinner
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+<<<<<<< HEAD
         android:shadowColor="@color/corDenuncia"
         android:id="@+id/spinner"/>
 
@@ -58,6 +59,9 @@
         android:textStyle="bold"
         android:gravity="left"
         android:textColor="@color/corDenuncia" />
+=======
+        android:hint="Tipo" />
+>>>>>>> b373dcd401e35bca0295766e80712c7f1c9bac61
 
     <EditText
         android:id="@+id/entradaLocalDenuncia"
