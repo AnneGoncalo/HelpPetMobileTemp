@@ -52,9 +52,7 @@ public class DenunciasActivity extends AppCompatActivity {
         if (isNetworkAvailable()) {
             new ConsultaDenuncias().execute(Path.getDenunciaPath());
         } else {
-<<<<<<< HEAD
             Toast.makeText(this, "Sem conexão com a internet", Toast.LENGTH_LONG).show();
-=======
             Toast.makeText(this, " Sem conexão com a internet ", Toast.LENGTH_LONG).show();
              final ArrayList<Denuncia> listaDenuncias = denunciaDAO.buscarDenuncia();
             if (listaDenuncias.size() > 0) {
@@ -79,7 +77,6 @@ public class DenunciasActivity extends AppCompatActivity {
 
 
 
->>>>>>> b373dcd401e35bca0295766e80712c7f1c9bac61
         }
     }
 
@@ -110,12 +107,7 @@ public class DenunciasActivity extends AppCompatActivity {
         return true;
     }
 
-<<<<<<< HEAD
-=======
 
-
-
->>>>>>> b373dcd401e35bca0295766e80712c7f1c9bac61
     public class ConsultaDenuncias extends AsyncTask<String, String, String> {
 
         @Override

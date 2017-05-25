@@ -4,10 +4,14 @@ import android.content.Context;
 import android.content.Intent;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
+import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
 
 import helppet.com.br.helppetmobile.DAO.DenunciaDAO;
 import helppet.com.br.helppetmobile.DenunciasActivity;
@@ -27,7 +31,7 @@ public class MainActivity extends AppCompatActivity {
         botaoDenuncia.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(context,DenunciasActivity.class);
+                Intent i = new Intent(context, DenunciasActivity.class);
                 startActivity(i);
             }
         });
@@ -37,7 +41,7 @@ public class MainActivity extends AppCompatActivity {
         botaoEvento.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(context,EventosActivity.class);
+                Intent i = new Intent(context, EventosActivity.class);
                 startActivity(i);
             }
         });
@@ -47,7 +51,7 @@ public class MainActivity extends AppCompatActivity {
         botaoExperiencia.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(context,ExperienciaActivity.class);
+                Intent i = new Intent(context, ExperienciaActivity.class);
                 startActivity(i);
             }
         });
@@ -57,7 +61,7 @@ public class MainActivity extends AppCompatActivity {
         botaoAnuncio.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(context,AnunciosActivity.class);
+                Intent i = new Intent(context, AnunciosActivity.class);
                 startActivity(i);
             }
         });
@@ -67,7 +71,7 @@ public class MainActivity extends AppCompatActivity {
         botaoOng.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(context,OngsActivity.class);
+                Intent i = new Intent(context, OngsActivity.class);
                 startActivity(i);
             }
         });
@@ -77,14 +81,14 @@ public class MainActivity extends AppCompatActivity {
         botaoClinica.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(context,ClinicaActivity.class);
+                Intent i = new Intent(context, ClinicaActivity.class);
                 startActivity(i);
             }
         });
 
         criarDenunciaActivity = new CriarDenunciaActivity();
 
-        if(isNetworkAvailable() && criarDenunciaActivity.temDenuncia(this)){
+        if (isNetworkAvailable() && criarDenunciaActivity.temDenuncia(this)) {
             criarDenunciaActivity.persistirDenunciasLocias(this);
         }
 
@@ -100,5 +104,27 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private Context context;
+
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.web, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        int menu_selecionado = item.getItemId();
+        if (menu_selecionado == R.id.menuWeb) {
+            if (isNetworkAvailable()) {
+                Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.facebook.com/HelpPetPage/"));
+                startActivity(browserIntent);
+            }else{
+                Toast.makeText(context, "Você não está conectado a internet",Toast.LENGTH_SHORT).show();
+            }
+
+        }
+        return true;
+    }
 
 }
