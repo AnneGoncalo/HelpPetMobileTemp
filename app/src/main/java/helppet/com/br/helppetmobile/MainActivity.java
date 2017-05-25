@@ -84,14 +84,13 @@ public class MainActivity extends AppCompatActivity {
 
         criarDenunciaActivity = new CriarDenunciaActivity();
 
-
         if(isNetworkAvailable() && criarDenunciaActivity.temDenuncia(this)){
             criarDenunciaActivity.persistirDenunciasLocias(this);
         }
 
     }
-    CriarDenunciaActivity criarDenunciaActivity;
 
+    CriarDenunciaActivity criarDenunciaActivity;
 
     private boolean isNetworkAvailable() {
         ConnectivityManager connectivityManager

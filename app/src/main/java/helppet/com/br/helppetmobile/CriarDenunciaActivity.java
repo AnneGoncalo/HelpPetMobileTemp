@@ -9,7 +9,10 @@ import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.EditText;
+import android.widget.Spinner;
 import android.widget.Toast;
 
 import com.google.gson.Gson;
@@ -20,6 +23,7 @@ import java.io.PrintStream;
 import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
@@ -34,17 +38,45 @@ public class CriarDenunciaActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_criar_denuncia);
         entradaTitulo = (EditText) findViewById(R.id.entradaTituloDenuncia);
-        entradaTipo = (EditText) findViewById(R.id.entradaTipoDenuncia);
+        //entradaTipo = (EditText) findViewById(R.id.entradaTipoDenuncia);
         entradaLocal = (EditText) findViewById(R.id.entradaLocalDenuncia);
         entradaDescricao = (EditText) findViewById(R.id.entradaDescricaoDenuncia);
         context = this;
         denunciaDAO = new DenunciaDAO(context);
 
+        Spinner spinner = (Spinner) findViewById(R.id.spinner);
+        List<String> categories = new ArrayList<String>();
+        categories.add("Abandono");
+        categories.add("Maus Tratos");
+        categories.add("Outro");
+
+        ArrayAdapter<String> dataAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, categories);
+        dataAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        spinner.setAdapter(dataAdapter);
+
+        spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                if (position == 0) {
+                    entradaTipo = "Abandono";
+                }
+                else if(position == 1){
+                    entradaTipo = "Maus Tratos";
+                }
+                else if(position == 2){
+                    entradaTipo = "Outro";
+                }
+            }
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
+            }
+        });
     }
 
     private Denuncia denuncia;
     private EditText entradaTitulo;
-    private EditText entradaTipo;
+    private String entradaTipo;
     private EditText entradaLocal;
     private EditText entradaDescricao;
     private Context context;
@@ -53,12 +85,10 @@ public class CriarDenunciaActivity extends AppCompatActivity {
 
     public void cadastrarDenuncia(View view) {
 
-
-        String tipo = entradaTipo.getText().toString();
+        String tipo = entradaTipo;
         String titulo = entradaTitulo.getText().toString();
         String descricao = entradaDescricao.getText().toString();
         String local = entradaLocal.getText().toString();
-
 
         denuncia = new Denuncia(titulo, descricao, tipo, local);
 
@@ -73,19 +103,13 @@ public class CriarDenunciaActivity extends AppCompatActivity {
                     new CriarDenuncia().execute(Path.getDenunciaPath(), jsonDenuncia);
                     finish();
                 } else {
-                    Toast.makeText(context, " Você está sem internet, sua denuncia será persistida mais tarde ... ", Toast.LENGTH_LONG).show();
-
-                    
+                    Toast.makeText(context, " Sem conexão com a internet, sua denuncia será persistida mais tarde ... ", Toast.LENGTH_LONG).show();
                     denunciaDAO.inserir(denuncia);
-
                 }
-
             }
         });
         dialog.setNeutralButton("Não", null);
         dialog.show();
-
-
     }
 
     private boolean isNetworkAvailable() {
@@ -135,7 +159,6 @@ public class CriarDenunciaActivity extends AppCompatActivity {
                 } catch (IOException e) {
                     e.printStackTrace();
                 }
-
             }
             return null;
         }
@@ -143,11 +166,7 @@ public class CriarDenunciaActivity extends AppCompatActivity {
         @Override
         protected void onPostExecute(String resultadoJason) {
             super.onPostExecute(resultadoJason);
-
-
         }
-
-
     }
 
     public void persistirDenunciasLocias(Context context) {
@@ -159,10 +178,7 @@ public class CriarDenunciaActivity extends AppCompatActivity {
             String denunciaJson = gson.toJson(denuncia);
             new CriarDenuncia().execute(Path.getDenunciaPath(), denunciaJson);
             denunciaDAO.excluir(denuncia);
-
         }
-
-
     }
 
     public boolean temDenuncia(Context context){

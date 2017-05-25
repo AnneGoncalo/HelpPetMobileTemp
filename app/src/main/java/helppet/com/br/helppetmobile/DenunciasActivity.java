@@ -49,12 +49,9 @@ public class DenunciasActivity extends AppCompatActivity {
         if (isNetworkAvailable()) {
             new ConsultaDenuncias().execute(Path.getDenunciaPath());
         } else {
-            Toast.makeText(this, " Não tem internet ", Toast.LENGTH_LONG).show();
+            Toast.makeText(this, "Sem conexão com a internet", Toast.LENGTH_LONG).show();
         }
-
-
     }
-
 
     private boolean isNetworkAvailable() {
         ConnectivityManager connectivityManager
@@ -63,11 +60,9 @@ public class DenunciasActivity extends AppCompatActivity {
         return activeNetworkInfo != null && activeNetworkInfo.isConnected();
     }
 
-
     private Context context;
     private ListView listViewDeuncias;
     private DenunciaAdapter denunciaAdapter;
-
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -84,7 +79,6 @@ public class DenunciasActivity extends AppCompatActivity {
         }
         return true;
     }
-
 
     public class ConsultaDenuncias extends AsyncTask<String, String, String> {
 

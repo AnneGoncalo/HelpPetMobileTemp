@@ -3,34 +3,78 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:padding="15dp"
+    android:background="@color/branco"
     tools:context="helppet.com.br.helppetmobile.CriarDenunciaActivity">
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
-        android:text="Denúncia"
+        android:text="Denuncie"
         android:textColor="@color/corDenuncia"
+        android:textStyle="bold"
         android:textSize="25dp" />
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="Título: "
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:gravity="left"
+        android:textColor="@color/corDenuncia" />
 
     <EditText
         android:id="@+id/entradaTituloDenuncia"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Título" />
+        android:hint="Título"
+        android:shadowColor="@color/corDenuncia"/>
 
-    <EditText
-        android:id="@+id/entradaTipoDenuncia"
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="Tipo: "
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:gravity="left"
+        android:textColor="@color/corDenuncia" />
+
+    <Spinner
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Típo" />
+        android:shadowColor="@color/corDenuncia"
+        android:id="@+id/spinner"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="Local: "
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:gravity="left"
+        android:textColor="@color/corDenuncia" />
 
     <EditText
         android:id="@+id/entradaLocalDenuncia"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:shadowColor="@color/corDenuncia"
         android:hint="Local" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="Descrição: "
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:gravity="left"
+        android:textColor="@color/corDenuncia" />
 
     <EditText
         android:id="@+id/entradaDescricaoDenuncia"
@@ -38,15 +82,17 @@
         android:layout_height="wrap_content"
         android:gravity="top|left"
         android:hint="Escreva sua denúncia aqui "
-        android:lines="10" />
+        android:lines="3"
+        android:shadowColor="@color/corDenuncia"/>
 
     <Button
         android:id="@+id/cadastrarDenuncia"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="right"
-        android:onClick="cadastrarDenuncia"
-        android:text="Denunciar" />
-
+        android:layout_marginTop="10dp"
+        android:background="@color/corDenuncia"
+        android:text="Denunciar"
+        android:textColor="@color/branco"
+        android:onClick="cadastrarDenuncia" />
 
 </LinearLayout>
