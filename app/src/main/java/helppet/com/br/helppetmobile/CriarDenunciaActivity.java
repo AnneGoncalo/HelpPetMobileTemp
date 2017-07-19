@@ -60,14 +60,13 @@ public class CriarDenunciaActivity extends AppCompatActivity {
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 if (position == 0) {
                     entradaTipo = "Abandono";
-                }
-                else if(position == 1){
+                } else if (position == 1) {
                     entradaTipo = "Maus Tratos";
-                }
-                else if(position == 2){
+                } else if (position == 2) {
                     entradaTipo = "Outro";
                 }
             }
+
             @Override
             public void onNothingSelected(AdapterView<?> parent) {
 
@@ -105,6 +104,7 @@ public class CriarDenunciaActivity extends AppCompatActivity {
                     new CriarDenuncia().execute(Path.getDenunciaPath(), jsonDenuncia);
                     finish();
                 } else {
+
                     Toast.makeText(context, " Você está sem internet, sua denuncia será persistida mais tarde ... ", Toast.LENGTH_LONG).show();
                     denunciaDAO.inserir(denuncia);
                     finish();
@@ -184,7 +184,7 @@ public class CriarDenunciaActivity extends AppCompatActivity {
         }
     }
 
-    public boolean temDenuncia(Context context){
+    public boolean temDenuncia(Context context) {
         denunciaDAO = new DenunciaDAO(context);
         return denunciaDAO.buscarDenuncia().size() > 0;
     }

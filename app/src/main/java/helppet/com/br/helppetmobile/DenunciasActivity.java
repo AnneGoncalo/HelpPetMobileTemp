@@ -73,7 +73,6 @@ public class DenunciasActivity extends AppCompatActivity {
                     }
                 });
             }
-
         }
     }
 
