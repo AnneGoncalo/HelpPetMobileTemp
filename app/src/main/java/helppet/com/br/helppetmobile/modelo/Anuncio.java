@@ -5,51 +5,60 @@ package helppet.com.br.helppetmobile.modelo;
  */
 
 public class Anuncio {
-    private int idAnuncio;
-    private String tituloAnuncio;
-    private String tipoAnuncio;
-    private String descricaoAnuncio;
+    private int id;
+    private String titulo;
+    private String tipo;
+    private String descricao;
+    private String foto;
 
     public Anuncio(){
 
     }
 
     public Anuncio(int idAnuncio, String tituloAnuncio, String tipoAnuncio, String descricaoAnuncio) {
-        this.idAnuncio = idAnuncio;
-        this.tituloAnuncio = tituloAnuncio;
-        this.tipoAnuncio = tipoAnuncio;
-        this.descricaoAnuncio = descricaoAnuncio;
+        this.id = idAnuncio;
+        this.titulo = tituloAnuncio;
+        this.tipo = tipoAnuncio;
+        this.descricao = descricaoAnuncio;
     }
 
-    public int getIdAnuncio() {
-        return idAnuncio;
+    public int getId() {
+        return id;
     }
 
-    public void setIdAnuncio(int idAnuncio) {
-        this.idAnuncio = idAnuncio;
+    public void setId(int id) {
+        this.id = id;
     }
 
-    public String getTituloAnuncio() {
-        return tituloAnuncio;
+    public String getTitulo() {
+        return titulo;
     }
 
-    public void setTituloAnuncio(String tituloAnuncio) {
-        this.tituloAnuncio = tituloAnuncio;
+    public void setTitulo(String titulo) {
+        this.titulo = titulo;
     }
 
-    public String getTipoAnuncio() {
-        return tipoAnuncio;
+    public String getTipo() {
+        return tipo;
     }
 
-    public void setTipoAnuncio(String tipoAnuncio) {
-        this.tipoAnuncio = tipoAnuncio;
+    public void setTipo(String tipo) {
+        this.tipo = tipo;
     }
 
-    public String getDescricaoAnuncio() {
-        return descricaoAnuncio;
+    public String getDescricao() {
+        return descricao;
     }
 
-    public void setDescricaoAnuncio(String descricaoAnuncio) {
-        this.descricaoAnuncio = descricaoAnuncio;
+    public void setDescricao(String descricao) {
+        this.descricao = descricao;
+    }
+
+    public String getFoto() {
+        return foto;
+    }
+
+    public void setFoto(String foto) {
+        this.foto = foto;
     }
 }

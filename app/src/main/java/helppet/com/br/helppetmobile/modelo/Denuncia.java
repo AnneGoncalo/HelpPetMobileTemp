@@ -5,80 +5,80 @@ package helppet.com.br.helppetmobile.modelo;
  */
 
 public class Denuncia {
-    private int idDenuncia;
-    private String tituloDenuncia;
-    private String descricaoDenuncia;
-    private String fotoDenuncia;
-    private String tipoDenuncia;
-    private String dataDenuncia;
+    private int id;
+    private String titulo;
+    private String descricao;
+    private String foto;
+    private String tipo;
+    private String data;
     private String localizacao;
 
     public Denuncia() {
     }
 
     public Denuncia(int idDenuncia, String tituloDenuncia, String descricaoDenuncia, String fotoDenuncia, String tipoDenuncia, String dataDenuncia, String localizacao) {
-        this.idDenuncia = idDenuncia;
-        this.tituloDenuncia = tituloDenuncia;
-        this.descricaoDenuncia = descricaoDenuncia;
-        this.fotoDenuncia = fotoDenuncia;
-        this.tipoDenuncia = tipoDenuncia;
-        this.dataDenuncia = dataDenuncia;
+        this.id = idDenuncia;
+        this.titulo = tituloDenuncia;
+        this.descricao = descricaoDenuncia;
+        this.tipo = tipoDenuncia;
+        this.foto = fotoDenuncia;
+        this.data = dataDenuncia;
         this.localizacao = localizacao;
     }
 
     public Denuncia(String tituloDenuncia, String descricaoDenuncia, String tipoDenuncia, String localizacao) {
-        this.tituloDenuncia = tituloDenuncia;
-        this.descricaoDenuncia = descricaoDenuncia;
-        this.tipoDenuncia = tipoDenuncia;
+        this.titulo = tituloDenuncia;
+        this.descricao = descricaoDenuncia;
+        this.tipo = tipoDenuncia;
         this.localizacao = localizacao;
     }
 
-    public int getIdDenuncia() {
-        return idDenuncia;
+    public int getId() {
+        return id;
     }
 
-    public void setIdDenuncia(int idDenuncia) {
-        this.idDenuncia = idDenuncia;
+    public void setId(int id) {
+        this.id = id;
     }
 
-    public String getTituloDenuncia() {
-        return tituloDenuncia;
+    public String getTitulo() {
+        return titulo;
     }
 
-    public void setTituloDenuncia(String tituloDenuncia) {
-        this.tituloDenuncia = tituloDenuncia;
+    public void setTitulo(String titulo) {
+        this.titulo = titulo;
     }
 
-    public String getDescricaoDenuncia() {
-        return descricaoDenuncia;
+    public String getDescricao() {
+        return descricao;
     }
 
-    public void setDescricaoDenuncia(String descricaoDenuncia) {
-        this.descricaoDenuncia = descricaoDenuncia;
+    public void setDescricao(String descricao) {
+        this.descricao = descricao;
     }
 
-    public String getFotoDenuncia() {
-        return fotoDenuncia;
+    public String getFoto() {
+        return foto;
     }
 
-    public void setFotoDenuncia(String fotoDenuncia) {
-        this.fotoDenuncia = fotoDenuncia;
+    public void setFoto(String foto) {
+        this.foto = foto;
     }
 
-    public String getTipoDenuncia() {
-        return tipoDenuncia;
+    public String getTipo() {
+        return tipo;
     }
 
-    public void setTipoDenuncia(String tipoDenuncia) {
-        this.tipoDenuncia = tipoDenuncia;
+    public void setTipo(String tipo) {
+        this.tipo = tipo;
     }
 
-    public String getDataDenuncia() {
-        return dataDenuncia;
+    public String getData() {
+        return data;
     }
 
-    public void setDataDenuncia(String dataDenuncia) {
-        this.dataDenuncia = dataDenuncia;
+    public void setData(String data) {
+        this.data = data;
     }
 
     public String getLocalizacao() {
@@ -88,8 +88,4 @@ public class Denuncia {
     public void setLocalizacao(String localizacao) {
         this.localizacao = localizacao;
     }
-
-
-
-
 }

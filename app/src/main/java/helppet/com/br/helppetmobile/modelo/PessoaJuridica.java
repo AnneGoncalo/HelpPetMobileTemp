@@ -6,32 +6,32 @@ package helppet.com.br.helppetmobile.modelo;
 
 public class PessoaJuridica {
     private int idUsuario;
-    private String nomeUsuario;
+    private String nome;
     private String email;
-    private String dataNascimento;
+    private String senha;
     private String foto;
+    private String nascimento;
     private String localizacao;
     private String telefone;
-    private String cnpj;
+    private String cpf_cnpj;
     private String funcionamento;
     private String descricao;
-    private String site;
 
     public PessoaJuridica() {
     }
 
-    public PessoaJuridica(int idUsuario, String nomeUsuario, String email, String dataNascimento, String foto, String localizacao, String telefone, String cnpj, String funcionamento, String descricao, String site) {
+    public PessoaJuridica(int idUsuario, String nome, String email, String senha, String foto, String nascimento, String localizacao, String telefone, String cpf_cnpj, String funcionamento, String descricao) {
         this.idUsuario = idUsuario;
-        this.nomeUsuario = nomeUsuario;
+        this.nome = nome;
         this.email = email;
-        this.dataNascimento = dataNascimento;
+        this.senha = senha;
         this.foto = foto;
+        this.nascimento = nascimento;
         this.localizacao = localizacao;
         this.telefone = telefone;
-        this.cnpj = cnpj;
+        this.cpf_cnpj = cpf_cnpj;
         this.funcionamento = funcionamento;
         this.descricao = descricao;
-        this.site = site;
     }
 
     public int getIdUsuario() {
@@ -42,12 +42,12 @@ public class PessoaJuridica {
         this.idUsuario = idUsuario;
     }
 
-    public String getNomeUsuario() {
-        return nomeUsuario;
+    public String getNome() {
+        return nome;
     }
 
-    public void setNomeUsuario(String nomeUsuario) {
-        this.nomeUsuario = nomeUsuario;
+    public void setNome(String nome) {
+        this.nome = nome;
     }
 
     public String getEmail() {
@@ -58,12 +58,12 @@ public class PessoaJuridica {
         this.email = email;
     }
 
-    public String getDataNascimento() {
-        return dataNascimento;
+    public String getSenha() {
+        return senha;
     }
 
-    public void setDataNascimento(String dataNascimento) {
-        this.dataNascimento = dataNascimento;
+    public void setSenha(String senha) {
+        this.senha = senha;
     }
 
     public String getFoto() {
@@ -72,6 +72,14 @@ public class PessoaJuridica {
 
     public void setFoto(String foto) {
         this.foto = foto;
+    }
+
+    public String getNascimento() {
+        return nascimento;
+    }
+
+    public void setNascimento(String nascimento) {
+        this.nascimento = nascimento;
     }
 
     public String getLocalizacao() {
@@ -90,12 +98,12 @@ public class PessoaJuridica {
         this.telefone = telefone;
     }
 
-    public String getCnpj() {
-        return cnpj;
+    public String getCpf_cnpj() {
+        return cpf_cnpj;
     }
 
-    public void setCnpj(String cnpj) {
-        this.cnpj = cnpj;
+    public void setCpf_cnpj(String cpf_cnpj) {
+        this.cpf_cnpj = cpf_cnpj;
     }
 
     public String getFuncionamento() {
@@ -112,13 +120,5 @@ public class PessoaJuridica {
 
     public void setDescricao(String descricao) {
         this.descricao = descricao;
-    }
-
-    public String getSite() {
-        return site;
-    }
-
-    public void setSite(String site) {
-        this.site = site;
     }
 }

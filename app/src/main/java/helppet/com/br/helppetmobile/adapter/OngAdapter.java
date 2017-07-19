@@ -51,7 +51,7 @@ public class OngAdapter extends BaseAdapter {
         TextView nome = (TextView) viewRetorno.findViewById(R.id.nomeOng);
         TextView local = (TextView) viewRetorno.findViewById(R.id.localOng);
 
-        nome.setText(pj.getNomeUsuario());
+        nome.setText(pj.getNome());
         local.setText(pj.getLocalizacao());
 
         return viewRetorno;

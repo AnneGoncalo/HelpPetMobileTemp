@@ -118,9 +118,9 @@ public class AnunciosActivity extends AppCompatActivity {
                         Intent i  = new Intent(context, DetalhesAnuncioActivity.class);
                         Anuncio anuncioSelecionado = anuncios.get(position);
 
-                        i.putExtra("titulo",anuncioSelecionado.getTituloAnuncio());
-                        i.putExtra("tipo",anuncioSelecionado.getTipoAnuncio());
-                        i.putExtra("descricao",anuncioSelecionado.getDescricaoAnuncio());
+                        i.putExtra("titulo",anuncioSelecionado.getTitulo());
+                        i.putExtra("tipo",anuncioSelecionado.getTipo());
+                        i.putExtra("descricao",anuncioSelecionado.getDescricao());
 
                         startActivity(i);
                     }

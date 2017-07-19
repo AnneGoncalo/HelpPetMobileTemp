@@ -119,11 +119,11 @@ public class OngsActivity extends AppCompatActivity {
                         Intent i  = new Intent(context, DetalhesOngActivity.class);
                         PessoaJuridica ongSelecionado = ongs.get(position);
 
-                        i.putExtra("nome",ongSelecionado.getNomeUsuario());
+                        i.putExtra("nome",ongSelecionado.getNome());
                         i.putExtra("email",ongSelecionado.getEmail());
                         i.putExtra("local",ongSelecionado.getLocalizacao());
                         i.putExtra("telefone",ongSelecionado.getTelefone());
-                        i.putExtra("site",ongSelecionado.getSite());
+                        //i.putExtra("site",ongSelecionado.getCpf_cnpj());
                         i.putExtra("funcionamento",ongSelecionado.getFuncionamento());
                         i.putExtra("descricao",ongSelecionado.getDescricao());
 

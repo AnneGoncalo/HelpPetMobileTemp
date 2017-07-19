@@ -52,10 +52,10 @@ public class EventoAdapter extends BaseAdapter {
         TextView horarioEvento = (TextView) viewRetorno.findViewById(R.id.horarioEvento);
         TextView localEvento = (TextView) viewRetorno.findViewById(R.id.localEvento);
 
-        nomeEvento.setText(evento.getNomeEvento());
-        dataEvento.setText(evento.getDataEvento());
-        horarioEvento.setText(evento.getHorarioEvento());
-        localEvento.setText(evento.getLocalEvento());
+        nomeEvento.setText(evento.getNome());
+        dataEvento.setText(evento.getData());
+        horarioEvento.setText(evento.getHorario());
+        localEvento.setText(evento.getLocalizacao());
 
         return viewRetorno;
     }

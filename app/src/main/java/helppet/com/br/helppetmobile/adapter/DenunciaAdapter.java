@@ -53,10 +53,10 @@ public class DenunciaAdapter extends BaseAdapter {
         TextView localDenuncia = (TextView) viewRetorno.findViewById(R.id.localDenuncia);
         TextView tituloDenuncia = (TextView) viewRetorno.findViewById(R.id.tituloDenuncia);
 
-        descricaoDenuncia.setText(denuncia.getDescricaoDenuncia());
-        tipoDenuncia.setText(denuncia.getTipoDenuncia());
+        descricaoDenuncia.setText(denuncia.getDescricao());
+        tipoDenuncia.setText(denuncia.getTipo());
         localDenuncia.setText(denuncia.getLocalizacao());
-        tituloDenuncia.setText(denuncia.getTituloDenuncia());
+        tituloDenuncia.setText(denuncia.getTitulo());
 
         return viewRetorno;
     }

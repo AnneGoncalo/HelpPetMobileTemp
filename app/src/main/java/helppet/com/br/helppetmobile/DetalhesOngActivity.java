@@ -16,7 +16,7 @@ public class DetalhesOngActivity extends AppCompatActivity {
         String email = b.getString("email");
         String local = b.getString("local");
         String telefone = b.getString("telefone");
-        String site = b.getString("site");
+        //String site = b.getString("site");
         String funcionamento = b.getString("funcionamento");
         String descricao = b.getString("descricao");
 
@@ -24,7 +24,7 @@ public class DetalhesOngActivity extends AppCompatActivity {
         emailOng = (TextView) findViewById(R.id.emailOngDescricao);
         localOng = (TextView) findViewById(R.id.localOngDescricao);
         telefoneOng = (TextView) findViewById(R.id.telefoneOngDescricao);
-        siteOng = (TextView) findViewById(R.id.siteOngDescricao);
+        //siteOng = (TextView) findViewById(R.id.siteOngDescricao);
         funciomentoOng = (TextView) findViewById(R.id.funcionamentoOngDescricao);
         descricaoOng = (TextView) findViewById(R.id.descricaoOngDescricao);
 
@@ -32,7 +32,7 @@ public class DetalhesOngActivity extends AppCompatActivity {
         emailOng.setText(email);
         telefoneOng.setText(telefone);
         localOng.setText(local);
-        siteOng.setText(site);
+        //siteOng.setText(site);
         funciomentoOng.setText(funcionamento);
         descricaoOng.setText(descricao);
     }
@@ -41,7 +41,7 @@ public class DetalhesOngActivity extends AppCompatActivity {
     private TextView emailOng;
     private TextView localOng;
     private TextView telefoneOng;
-    private TextView siteOng;
+    //private TextView siteOng;
     private TextView funciomentoOng;
     private TextView descricaoOng;
 }

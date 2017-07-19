@@ -27,20 +27,17 @@ public class DenunciaDAO {
     public void inserir(Denuncia denuncia) {
 
         ContentValues values = new ContentValues();
-        values.put("titulo", denuncia.getTituloDenuncia());
+        values.put("titulo", denuncia.getTitulo());
         values.put("local", denuncia.getLocalizacao());
-        values.put("descricao", denuncia.getDescricaoDenuncia());
-        values.put("tipo", denuncia.getTipoDenuncia());
+        values.put("descricao", denuncia.getDescricao());
+        values.put("tipo", denuncia.getTipo());
         conn.insert("denuncias", null, values);
 
-
     }
-
 
     public void excluir(Denuncia denuncia) {
-        conn.delete("denuncias", " _id= ?", new String[]{String.valueOf(denuncia.getIdDenuncia())});
+        conn.delete("denuncias", " _id= ?", new String[]{String.valueOf(denuncia.getId())});
     }
-
 
     /*public void alterar(Denuncia aula, Context context) {
         ContentValues values = new ContentValues();
@@ -52,7 +49,6 @@ public class DenunciaDAO {
 
     }*/
 
-
     public ArrayList<Denuncia> buscarDenuncia() {
 
         ArrayList<Denuncia> retorno = new ArrayList<>();
@@ -62,15 +58,14 @@ public class DenunciaDAO {
         if (cursor.getCount() > 0) {
             do {
                 Denuncia denuncia = new Denuncia();
-                denuncia.setIdDenuncia(cursor.getInt(cursor.getColumnIndex("_id")));
-                denuncia.setTituloDenuncia(cursor.getString(1));
+                denuncia.setId(cursor.getInt(cursor.getColumnIndex("_id")));
+                denuncia.setTitulo(cursor.getString(1));
                 denuncia.setLocalizacao(cursor.getString(2));
-                denuncia.setTipoDenuncia(cursor.getString(3));
-                denuncia.setDescricaoDenuncia(cursor.getString(4));
+                denuncia.setTipo(cursor.getString(3));
+                denuncia.setDescricao(cursor.getString(4));
 
                 retorno.add(denuncia);
             } while (cursor.moveToNext());
-
 
         }
         return retorno;

@@ -5,7 +5,7 @@ package helppet.com.br.helppetmobile.util;
  */
 
 public  class  Path {
-    private static String api = "http://10.24.16.84:8080/HelpPet/rest/";
+    private static String api = "http://helppettads-appnerd.rhcloud.com/HelpPetMaven/rest/";
     //private static String api = "http://10.0.0.107:8080/HelpPet/rest/";
     private static String denunciaPath = api + "denuncia";
     private static String eventoPath = api + "evento";

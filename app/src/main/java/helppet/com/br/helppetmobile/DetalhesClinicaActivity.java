@@ -16,7 +16,7 @@ public class DetalhesClinicaActivity extends AppCompatActivity {
         String email = b.getString("email");
         String local = b.getString("local");
         String telefone = b.getString("telefone");
-        String site = b.getString("site");
+        //String site = b.getString("site");
         String funcionamento = b.getString("funcionamento");
         String descricao = b.getString("descricao");
 
@@ -24,7 +24,7 @@ public class DetalhesClinicaActivity extends AppCompatActivity {
         emailClinica = (TextView) findViewById(R.id.emailClinicaDescricao);
         localClinica = (TextView) findViewById(R.id.localClinicaDescricao);
         telefoneClinica = (TextView) findViewById(R.id.telefoneClinicaDescricao);
-        siteClinica = (TextView) findViewById(R.id.siteClinicaDescricao);
+        //siteClinica = (TextView) findViewById(R.id.siteClinicaDescricao);
         funciomentoClinica = (TextView) findViewById(R.id.funcionamentoClinicaDescricao);
         descricaoClinica = (TextView) findViewById(R.id.descricaoClinicaDescricao);
 
@@ -32,7 +32,7 @@ public class DetalhesClinicaActivity extends AppCompatActivity {
         emailClinica.setText(email);
         telefoneClinica.setText(telefone);
         localClinica.setText(local);
-        siteClinica.setText(site);
+        //siteClinica.setText(site);
         funciomentoClinica.setText(funcionamento);
         descricaoClinica.setText(descricao);
     }
@@ -41,7 +41,7 @@ public class DetalhesClinicaActivity extends AppCompatActivity {
     private TextView emailClinica;
     private TextView localClinica;
     private TextView telefoneClinica;
-    private TextView siteClinica;
+    //private TextView siteClinica;
     private TextView funciomentoClinica;
     private TextView descricaoClinica;
 

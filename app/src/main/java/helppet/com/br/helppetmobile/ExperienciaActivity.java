@@ -117,9 +117,9 @@ public class ExperienciaActivity extends AppCompatActivity {
                         Intent i  = new Intent(context, DetalhesExperienciaActivity.class);
                         Experiencia experienciaSelecionada = experiencias.get(position);
 
-                        i.putExtra("titulo",experienciaSelecionada.getTituloExperiencia());
-                        i.putExtra("tipo",experienciaSelecionada.getTipoExperiencia());
-                        i.putExtra("data",experienciaSelecionada.getDataCadastro());
+                        i.putExtra("titulo",experienciaSelecionada.getTitulo());
+                        i.putExtra("tipo",experienciaSelecionada.getTipo());
+                        i.putExtra("data",experienciaSelecionada.getCadastro());
                         i.putExtra("texto",experienciaSelecionada.getTexto());
 
                         startActivity(i);

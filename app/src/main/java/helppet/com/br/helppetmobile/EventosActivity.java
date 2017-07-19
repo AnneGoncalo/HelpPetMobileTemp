@@ -44,7 +44,6 @@ public class EventosActivity extends AppCompatActivity {
             Toast.makeText(context,"Sem conexão com a interntet",Toast.LENGTH_SHORT).show();
         }
 
-
     }
 
     private Context context;
@@ -116,11 +115,11 @@ public class EventosActivity extends AppCompatActivity {
                         Intent i  = new Intent(context, DetalhesDenunciaActivty.class);
                         Evento eventoSelecionado = eventos.get(position);
 
-                        i.putExtra("nomeEvento",eventoSelecionado.getNomeEvento());
-                        i.putExtra("dataEvento",eventoSelecionado.getDataEvento());
-                        i.putExtra("horarioEvento",eventoSelecionado.getHorarioEvento());
-                        i.putExtra("localEvento",eventoSelecionado.getLocalEvento());
-                        i.putExtra("descricaoEvento",eventoSelecionado.getDescricaoEvento());
+                        i.putExtra("nomeEvento",eventoSelecionado.getNome());
+                        i.putExtra("dataEvento",eventoSelecionado.getData());
+                        i.putExtra("horarioEvento",eventoSelecionado.getHorario());
+                        i.putExtra("localEvento",eventoSelecionado.getLocalizacao());
+                        i.putExtra("descricaoEvento",eventoSelecionado.getDescricao());
 
                         startActivity(i);
                     }

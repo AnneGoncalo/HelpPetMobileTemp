@@ -44,8 +44,8 @@ public class ExperienciaAdapter extends BaseAdapter {
         TextView tipoExperiencia = (TextView) viewRetorno.findViewById(R.id.tipoExperiencia);
         TextView textoExperiencia = (TextView) viewRetorno.findViewById(R.id.textoExperiencia);
 
-        tituloExperiencia.setText(experiencia.getTituloExperiencia());
-        tipoExperiencia.setText(experiencia.getTipoExperiencia());
+        tituloExperiencia.setText(experiencia.getTitulo());
+        tipoExperiencia.setText(experiencia.getTipo());
         textoExperiencia.setText(experiencia.getTexto());
 
         return viewRetorno;

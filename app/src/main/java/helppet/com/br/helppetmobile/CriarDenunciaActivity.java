@@ -8,6 +8,7 @@ import android.os.AsyncTask;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -100,20 +101,13 @@ public class CriarDenunciaActivity extends AppCompatActivity {
                 if (isNetworkAvailable()) {
                     Gson gson = new Gson();
                     String jsonDenuncia = gson.toJson(denuncia);
+                    Log.d("JsonDenuncia", jsonDenuncia);
                     new CriarDenuncia().execute(Path.getDenunciaPath(), jsonDenuncia);
                     finish();
                 } else {
-<<<<<<< HEAD
-                    Toast.makeText(context, " Sem conexão com a internet, sua denuncia será persistida mais tarde ... ", Toast.LENGTH_LONG).show();
-                    denunciaDAO.inserir(denuncia);
-=======
                     Toast.makeText(context, " Você está sem internet, sua denuncia será persistida mais tarde ... ", Toast.LENGTH_LONG).show();
-
-
                     denunciaDAO.inserir(denuncia);
                     finish();
-
->>>>>>> b373dcd401e35bca0295766e80712c7f1c9bac61
                 }
             }
         });

@@ -48,7 +48,7 @@ public class ClinicaAdapter extends BaseAdapter {
         TextView nome = (TextView) viewRetorno.findViewById(R.id.nomeClinica);
         TextView local = (TextView) viewRetorno.findViewById(R.id.localClinica);
 
-        nome.setText(pj.getNomeUsuario());
+        nome.setText(pj.getNome());
         local.setText(pj.getLocalizacao());
 
         return viewRetorno;

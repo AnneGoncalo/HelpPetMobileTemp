@@ -64,26 +64,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
-        android:text="Site: "
-        android:textSize="20dp"
-        android:textStyle="bold"
-        android:gravity="left"
-        android:textColor="@color/corOng" />
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="25dp"
-        android:gravity="left"
-        android:text="www.ongteste.com"
-        android:textSize="20dp"
-        android:textColor="#000"
-        android:id="@+id/siteOngDescricao"/>
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="5dp"
         android:text="Funcionamento: "
         android:textSize="20dp"
         android:textStyle="bold"

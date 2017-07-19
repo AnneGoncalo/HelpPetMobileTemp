@@ -122,9 +122,9 @@ public class ClinicaActivity extends AppCompatActivity {
                         Intent i  = new Intent(context, DetalhesClinicaActivity.class);
                         PessoaJuridica clinicaSel = clinicas.get(position);
 
-                        i.putExtra("nome",clinicaSel.getNomeUsuario());
+                        i.putExtra("nome",clinicaSel.getNome());
                         i.putExtra("email",clinicaSel.getEmail());
-                        i.putExtra("site",clinicaSel.getSite());
+                        //i.putExtra("site",clinicaSel.getSite());
                         i.putExtra("local",clinicaSel.getLocalizacao());
                         i.putExtra("telefone",clinicaSel.getTelefone());
                         i.putExtra("funcionamento",clinicaSel.getFuncionamento());

@@ -5,46 +5,48 @@ package helppet.com.br.helppetmobile.modelo;
  */
 
 public class Experiencia {
-    private int idExperiencia;
-    private String tituloExperiencia;
-    private String tipoExperiencia;
+    private int id;
+    private String titulo;
+    private String tipo;
     private String texto;
-    private String dataCadastro;
+    private String foto;
+    private String cadastro;
 
     public Experiencia(){
 
     }
 
-    public Experiencia(int idExperiencia, String tituloExperiencia, String tipoExperiencia, String texto, String dataCadastro) {
-        this.idExperiencia = idExperiencia;
-        this.tituloExperiencia = tituloExperiencia;
-        this.tipoExperiencia = tipoExperiencia;
+    public Experiencia(int id, String titulo, String tipo, String texto, String foto, String cadastro) {
+        this.id = id;
+        this.titulo = titulo;
+        this.tipo = tipo;
         this.texto = texto;
-        this.dataCadastro = dataCadastro;
+        this.foto = foto;
+        this.cadastro = cadastro;
     }
 
-    public int getIdExperiencia() {
-        return idExperiencia;
+    public int getId() {
+        return id;
     }
 
-    public void setIdExperiencia(int idExperiencia) {
-        this.idExperiencia = idExperiencia;
+    public void setId(int id) {
+        this.id = id;
     }
 
-    public String getTituloExperiencia() {
-        return tituloExperiencia;
+    public String getTitulo() {
+        return titulo;
     }
 
-    public void setTituloExperiencia(String tituloExperiencia) {
-        this.tituloExperiencia = tituloExperiencia;
+    public void setTitulo(String titulo) {
+        this.titulo = titulo;
     }
 
-    public String getTipoExperiencia() {
-        return tipoExperiencia;
+    public String getTipo() {
+        return tipo;
     }
 
-    public void setTipoExperiencia(String tipoExperiencia) {
-        this.tipoExperiencia = tipoExperiencia;
+    public void setTipo(String tipo) {
+        this.tipo = tipo;
     }
 
     public String getTexto() {
@@ -55,11 +57,19 @@ public class Experiencia {
         this.texto = texto;
     }
 
-    public String getDataCadastro() {
-        return dataCadastro;
+    public String getFoto() {
+        return foto;
     }
 
-    public void setDataCadastro(String dataCadastro) {
-        this.dataCadastro = dataCadastro;
+    public void setFoto(String foto) {
+        this.foto = foto;
+    }
+
+    public String getCadastro() {
+        return cadastro;
+    }
+
+    public void setCadastro(String cadastro) {
+        this.cadastro = cadastro;
     }
 }

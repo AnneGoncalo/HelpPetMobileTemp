@@ -5,70 +5,51 @@ package helppet.com.br.helppetmobile.modelo;
  */
 
 public class Evento {
-    private int idEvento;
-    private String nomeEvento;
-    private String dataEvento;
-    private String horarioEvento;
-    private String localEvento;
-    private String descricaoEvento;
+    private int id;
+    private String nome;
+    private String data;
+    private String horario;
+    private String localizacao;
+    private String descricao;
+    private String foto;
 
     public Evento() {
     }
 
     public Evento(int idEvento, String nomeEvento, String dataEvento, String horarioEvento, String localEvento, String descricaoEvento) {
-        this.idEvento = idEvento;
-        this.nomeEvento = nomeEvento;
-        this.dataEvento = dataEvento;
-        this.horarioEvento = horarioEvento;
-        this.localEvento = localEvento;
-        this.descricaoEvento = descricaoEvento;
+        this.id = idEvento;
+        this.nome = nomeEvento;
+        this.data = dataEvento;
+        this.horario = horarioEvento;
+        this.localizacao = localEvento;
+        this.descricao = descricaoEvento;
     }
 
-    public int getIdEvento() {
-        return idEvento;
-    }
+    public int getId() { return id; }
 
-    public void setIdEvento(int idEvento) {
-        this.idEvento = idEvento;
-    }
+    public void setId(int id) { this.id = id; }
 
-    public String getNomeEvento() {
-        return nomeEvento;
-    }
+    public String getNome() { return nome; }
 
-    public void setNomeEvento(String nomeEvento) {
-        this.nomeEvento = nomeEvento;
-    }
+    public void setNome(String nome) { this.nome = nome; }
 
-    public String getDataEvento() {
-        return dataEvento;
-    }
+    public String getData() { return data; }
 
-    public void setDataEvento(String dataEvento) {
-        this.dataEvento = dataEvento;
-    }
+    public void setData(String data) { this.data = data; }
 
-    public String getHorarioEvento() {
-        return horarioEvento;
-    }
+    public String getHorario() { return horario; }
 
-    public void setHorarioEvento(String horarioEvento) {
-        this.horarioEvento = horarioEvento;
-    }
+    public void setHorario(String horario) { this.horario = horario; }
 
-    public String getLocalEvento() {
-        return localEvento;
-    }
+    public String getLocalizacao() { return localizacao; }
 
-    public void setLocalEvento(String localEvento) {
-        this.localEvento = localEvento;
-    }
+    public void setLocalizacao(String localizacao) { this.localizacao = localizacao; }
 
-    public String getDescricaoEvento() {
-        return descricaoEvento;
-    }
+    public String getDescricao() { return descricao; }
 
-    public void setDescricaoEvento(String descricaoEvento) {
-        this.descricaoEvento = descricaoEvento;
-    }
+    public void setDescricao(String descricao) { this.descricao = descricao; }
+
+    public String getFoto() { return foto; }
+
+    public void setFoto(String foto) { this.foto = foto; }
 }

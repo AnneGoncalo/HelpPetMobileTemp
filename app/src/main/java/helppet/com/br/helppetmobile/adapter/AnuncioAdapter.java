@@ -49,8 +49,8 @@ public class AnuncioAdapter extends BaseAdapter {
         TextView tituloAnuncio = (TextView) viewRetorno.findViewById(R.id.tituloAnuncio);
         TextView tipoAnuncio = (TextView) viewRetorno.findViewById(R.id.tipoAnuncio);
 
-        tituloAnuncio.setText(anuncio.getTituloAnuncio());
-        tipoAnuncio.setText(anuncio.getTipoAnuncio());
+        tituloAnuncio.setText(anuncio.getTitulo());
+        tipoAnuncio.setText(anuncio.getTipo());
 
         return viewRetorno;
     }
